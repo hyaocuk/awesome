@@ -1,0 +1,40 @@
+
+<h1>Goodbye now!</h1>
+
+string1 is: <%= $string1 %>
+<br />
+string2 is: <%= $string2 %>
+<br />
+so the connection is: <%= $string3 %>
+<br />
+we are link to <%= link_to "Hello", say_hello_path %>
+<br />
+<br />
+Here let's see the files in the current DIR:
+<br />
+<br />
+<div id="list-files">
+<table border="1">
+<tr>
+<td>
+<strong>id.</strong>
+</td>
+<td>
+<strong>filename</strong>
+</td>
+</tr>
+
+<% @i=1 %>
+<% for file in @files %>
+<tr>
+<td>
+<%= @i %>
+</td>
+<td>
+<%= file %>
+</td>
+</tr>
+<% @i = @i + 1 %>
+<% end %>
+</table>
+</div>
